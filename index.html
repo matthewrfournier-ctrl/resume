@@ -3,13 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Matthew Fournier — Database Administration</title>
+  <title>Matthew Fournier — Database Administrator Student</title>
   <meta name="description" content="Resume and portfolio of Matthew Fournier, Database Administrator Student." />
-  <!-- Font & CSS -->
+
+  <!-- Fonts & Styles -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css\styles.css" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
   <div class="page">
@@ -26,9 +27,9 @@
         <li class="dot">•</li>
         <li>Calgary, AB</li>
         <li class="dot">•</li>
-        <li><a href="{{ https://www.linkedin.com/in/your-handle }}">LinkedIn</a></li>
+        <li><a href="{{ https://www.linkedin.com/in/your-handle }}" target="_blank" rel="noopener">LinkedIn</a></li>
         <li class="dot">•</li>
-        <li><a href="{{ https://github.com/YOUR-USERNAME }}">GitHub</a></li>
+        <li><a href="{{ https://github.com/YOUR-USERNAME }}" target="_blank" rel="noopener">GitHub</a></li>
       </ul>
     </header>
 
@@ -40,8 +41,8 @@
         <section class="card">
           <h2 class="card-title">Summary</h2>
           <p>
-            {{ 2–4 sentences: Who you are, your strengths, and what you’re targeting. Example: }}
-            I’m a Database Administrator student focusing on SQL Server and Oracle administration. I enjoy backup/restore automation, performance fundamentals, and secure user/role management. Seeking internship or junior DBA roles where I can support database operations and reliability.
+            {{ 2–4 sentences: Who you are, strengths, and goal. Example: }}
+            I’m a Database Administrator student focusing on SQL Server and Oracle. I enjoy backup/restore automation, performance fundamentals, and secure user/role management. Seeking internship or junior DBA roles where I can support database operations and reliability.
           </p>
           <div class="chips">
             <span class="chip">Database Administration</span>
@@ -51,7 +52,7 @@
           </div>
         </section>
 
-        <!-- EXPERIENCE / PROJECTS -->
+        <!-- EXPERIENCE -->
         <section class="card">
           <h2 class="card-title">Experience</h2>
 
@@ -67,9 +68,8 @@
               <li>Explored differences between <strong>T‑SQL</strong> and <strong>PL/SQL</strong> and admin tools (SSMS vs. SQL Developer).</li>
             </ul>
             <p class="stack"><strong>Tech:</strong> SQL Server, Oracle, T‑SQL, PL/SQL, SSMS, SQL Developer</p>
-            <p class="links">
-              {{ Optional: <a href="https://github.com/YOUR-USERNAME/travel-agency-dbs">Repository</a> }}
-            </p>
+            <!-- Optional repo link -->
+            <!-- <p class="links"><a href="https://github.com/YOUR-USERNAME/travel-agency-dbs" target="_blank" rel="noopener">Repository</a></p> -->
           </article>
 
           <!-- Duplicate for more entries -->
@@ -85,3 +85,69 @@
             </ul>
             <p class="stack"><strong>Tech:</strong> {{ List tech }}</p>
           </article>
+        </section>
+      </section>
+
+      <!-- RIGHT COLUMN (SIDEBAR) -->
+      <aside class="col-right" aria-label="Sidebar">
+        <!-- CORE SKILLS (visually separate card) -->
+        <section class="card">
+          <h2 class="card-title">Core Skills</h2>
+          <div class="chips chips-stack">
+            <span class="chip">SQL Server</span>
+            <span class="chip">Oracle</span>
+            <span class="chip">T‑SQL</span>
+            <span class="chip">PL/SQL</span>
+            <span class="chip">Backup &amp; Restore</span>
+            <span class="chip">User &amp; Role Security</span>
+            <span class="chip">Indexing Basics</span>
+            <span class="chip">Query Tuning (intro)</span>
+            <span class="chip">SSMS · SQL Developer</span>
+            <span class="chip">Azure Data Studio</span>
+            <span class="chip">Git &amp; GitHub</span>
+            <span class="chip">PowerShell · Bash</span>
+          </div>
+        </section>
+
+        <!-- EDUCATION (visually separate card) -->
+        <section class="card">
+          <h2 class="card-title">Education</h2>
+          <div class="edu">
+            <h3 class="edu-title">{{ Database Administration Diploma (or Program) }}</h3>
+            <div class="edu-meta">{{ Institution }} · {{ 2024–2026 }}</div>
+            <ul class="bullets">
+              <li>{{ Relevant course or highlight }}</li>
+              <li>{{ Database-related coursework }}</li>
+            </ul>
+          </div>
+
+          <!-- Add another education block if needed -->
+          <!--
+          <div class="edu">
+            <h3 class="edu-title">{{ Credential Name }}</h3>
+            <div class="edu-meta">{{ Institution }} · {{ Years }}</div>
+          </div>
+          -->
+        </section>
+
+        <!-- CONTACT (optional separate card) -->
+        <section class="card">
+          <h2 class="card-title">Contact</h2>
+          <ul class="contact-list">
+            <li><strong>Email:</strong> <a href="mailto:matthew.r.fournier@gmail.com">matthew.r.fournier@gmail.com</a></li>
+            <li><strong>LinkedIn:</strong> <a href="{{ https://www.linkedin.com/in/your-handle }}" target="_blank" rel="noopener">linkedin.com/in/your-handle</a></li>
+            <li><strong>GitHub:</strong> <a href="{{ https://github.com/YOUR-USERNAME }}" target="_blank" rel="noopener">github.com/YOUR-USERNAME</a></li>
+          </ul>
+        </section>
+      </aside>
+    </main>
+
+    <footer class="footer container">
+      <p>© <span id="year"></span> Matthew Fournier · HTML &amp; CSS · GitHub Pages</p>
+    </footer>
+  </div>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
+``
