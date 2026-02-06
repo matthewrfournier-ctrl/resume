@@ -3,149 +3,85 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Matthew Fournier — Database Administrator Student</title>
+  <title>Matthew Fournier — Database Administration</title>
   <meta name="description" content="Resume and portfolio of Matthew Fournier, Database Administrator Student." />
+  <!-- Font & CSS -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-wrap">
-      <div class="identity">
-        <img src="assets/profile.jpg" alt="Profile photo of Matthew Fournier" class="avatar" />
-        <div>
-          <h1 class="name">Matthew Fournier</h1>
-          <p class="title">Database Administrator Student</p>
-        </div>
+  <div class="page">
+    <!-- HEADER -->
+    <header class="header container">
+      <div>
+        <h1 class="name">Matthew Fournier</h1>
+        <p class="subtitle">Database Administrator Student</p>
       </div>
-      <nav aria-label="Primary" class="nav">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main id="content" class="container">
-    <!-- ABOUT -->
-    <section id="about" class="card">
-      <h2>About Me</h2>
-      <p class="lede">
-        {{ 2–4 sentences: Who you are, what you’re studying, and what you’re looking for. 
-        Example: I’m a Database Administrator student focused on SQL Server and Oracle. 
-        I enjoy performance tuning, backup/restore automation, and building secure, reliable data platforms. 
-        Currently seeking internships or entry-level roles where I can support database operations and automation. }}
-      </p>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills" class="card">
-      <h2>Technical Skills</h2>
-      <div class="skills-grid">
-        <div>
-          <h3>Databases</h3>
-          <ul>
-            <li>SQL Server (installation, configuration, backups, restores)</li>
-            <li>Oracle Database (users/roles, tablespaces, parameter basics)</li>
-            <li>MySQL / PostgreSQL (querying, schema design basics)</li>
-          </ul>
-        </div>
-        <div>
-          <h3>SQL & Scripting</h3>
-          <ul>
-            <li>Transact-SQL (T-SQL): joins, CTEs, window functions</li>
-            <li>PL/SQL: procedures, functions, packages (intro level)</li>
-            <li>PowerShell & Bash for admin automation</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Administration</h3>
-          <ul>
-            <li>Backup/Restore strategies (FULL/DIFF/LOG)</li>
-            <li>User/Role management & basic security</li>
-            <li>Indexing basics & query performance fundamentals</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Tools & Platforms</h3>
-          <ul>
-            <li>SSMS, Azure Data Studio</li>
-            <li>SQL*Plus / SQL Developer</li>
-            <li>Git & GitHub, Docker (intro)</li>
-          </ul>
-        </div>
-      </div>
-
-      <h3>Certifications</h3>
-      <p>Currently none. {{ Optional: Add planned or in-progress certifications here. }}</p>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects" class="card">
-      <h2>Projects</h2>
-
-      <article class="project">
-        <div class="project-head">
-          <h3>Travel Agency Databases — SQL Server & Oracle</h3>
-          <span class="meta">Academic Project · {{ Month Year }}</span>
-        </div>
-        <p>
-          Designed and deployed two relational databases for a fictional travel agency—one on Microsoft SQL Server and one on Oracle—to compare administration workflows and SQL dialects.
-        </p>
-        <ul>
-          <li>Created schemas for <strong>Customers</strong>, <strong>Bookings</strong>, <strong>Trips</strong>, and <strong>Payments</strong>.</li>
-          <li>Implemented PK/FK constraints, indexes on high‑selectivity columns, and sample datasets.</li>
-          <li>Configured <strong>backups and restores</strong> (SQL Server FULL/DIFF/LOG; Oracle RMAN basics).</li>
-          <li>Wrote representative queries and stored procedures/functions for reporting and integrity checks.</li>
-          <li>Compared <strong>T-SQL vs. PL/SQL</strong> syntax and admin tools (SSMS vs. SQL Developer).</li>
-        </ul>
-        <p class="stack"><strong>Tech:</strong> SQL Server, Oracle Database, T-SQL, PL/SQL, SSMS, SQL Developer</p>
-        <p>
-          {{ Optional: Link to repo or scripts }}
-          <!-- Example:
-          <a href="https://github.com/YOUR-USERNAME/travel-agency-dbs" target="_blank" rel="noopener">View scripts & documentation</a>
-          -->
-        </p>
-      </article>
-
-      <!-- Duplicate this block for more projects -->
-      <article class="project">
-        <div class="project-head">
-          <h3>{{ Project Title }}</h3>
-          <span class="meta">{{ Role or Type · Month Year }}</span>
-        </div>
-        <p>{{ 2–3 sentence description of problem, your approach, and outcome. }}</p>
-        <ul>
-          <li>{{ Bullet point impact/achievement }}</li>
-          <li>{{ Bullet point tools/tech }}</li>
-          <li>{{ Bullet point learning/result }}</li>
-        </ul>
-        <p class="stack"><strong>Tech:</strong> {{ List tech }}</p>
-      </article>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="card">
-      <h2>Contact</h2>
-      <ul class="contact-list">
-        <li><strong>Email:</strong> <a href="mailto:matthew.r.fournier@gmail.com">matthew.r.fournier@gmail.com</a></li>
-        <li><strong>LinkedIn:</strong> <a href="{{ https://www.linkedin.com/in/your-handle }}" target="_blank" rel="noopener">{{ linkedin.com/in/your-handle }}</a></li>
-        <li><strong>GitHub:</strong> <a href="{{ https://github.com/YOUR-USERNAME }}" target="_blank" rel="noopener">{{ github.com/YOUR-USERNAME }}</a></li>
+      <ul class="contact-inline">
+        <li><a href="mailto:matthew.r.fournier@gmail.com">matthew.r.fournier@gmail.com</a></li>
+        <li class="dot">•</li>
+        <li>{{ +1 (XXX) XXX‑XXXX }}</li>
+        <li class="dot">•</li>
+        <li>Calgary, AB</li>
+        <li class="dot">•</li>
+        <li><a href="{{ https://www.linkedin.com/in/your-handle }}">LinkedIn</a></li>
+        <li class="dot">•</li>
+        <li><a href="{{ https://github.com/YOUR-USERNAME }}">GitHub</a></li>
       </ul>
-    </section>
-  </main>
+    </header>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> Matthew Fournier · Built with HTML & CSS · Hosted on GitHub Pages</p>
-    </div>
-  </footer>
+    <!-- GRID -->
+    <main class="container grid">
+      <!-- LEFT COLUMN -->
+      <section aria-label="Main content" class="col-left">
+        <!-- SUMMARY -->
+        <section class="card">
+          <h2 class="card-title">Summary</h2>
+          <p>
+            {{ 2–4 sentences: Who you are, your strengths, and what you’re targeting. Example: }}
+            I’m a Database Administrator student focusing on SQL Server and Oracle administration. I enjoy backup/restore automation, performance fundamentals, and secure user/role management. Seeking internship or junior DBA roles where I can support database operations and reliability.
+          </p>
+          <div class="chips">
+            <span class="chip">Database Administration</span>
+            <span class="chip">SQL &amp; PL/SQL</span>
+            <span class="chip">Performance Basics</span>
+            <span class="chip">Backup &amp; Restore</span>
+          </div>
+        </section>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+        <!-- EXPERIENCE / PROJECTS -->
+        <section class="card">
+          <h2 class="card-title">Experience</h2>
+
+          <article class="item">
+            <header class="item-head">
+              <h3 class="item-title">Travel Agency Databases — SQL Server &amp; Oracle</h3>
+              <div class="item-meta">Academic Project · {{ 2025 }}</div>
+            </header>
+            <ul class="bullets">
+              <li>Designed schemas for <strong>Customers</strong>, <strong>Bookings</strong>, <strong>Trips</strong>, and <strong>Payments</strong> with PK/FK constraints.</li>
+              <li>Implemented indexing on high‑selectivity columns and wrote representative reporting queries.</li>
+              <li>Configured <strong>backups/restores</strong> (SQL Server FULL/DIFF/LOG; Oracle RMAN basics).</li>
+              <li>Explored differences between <strong>T‑SQL</strong> and <strong>PL/SQL</strong> and admin tools (SSMS vs. SQL Developer).</li>
+            </ul>
+            <p class="stack"><strong>Tech:</strong> SQL Server, Oracle, T‑SQL, PL/SQL, SSMS, SQL Developer</p>
+            <p class="links">
+              {{ Optional: <a href="https://github.com/YOUR-USERNAME/travel-agency-dbs">Repository</a> }}
+            </p>
+          </article>
+
+          <!-- Duplicate for more entries -->
+          <article class="item">
+            <header class="item-head">
+              <h3 class="item-title">{{ Project or Experience Title }}</h3>
+              <div class="item-meta">{{ Role or Type · Year }}</div>
+            </header>
+            <ul class="bullets">
+              <li>{{ Impact/achievement bullet }}</li>
+              <li>{{ Tooling/tech bullet }}</li>
+              <li>{{ Result/learning bullet }}</li>
+            </ul>
+            <p class="stack"><strong>Tech:</strong> {{ List tech }}</p>
+          </article>
